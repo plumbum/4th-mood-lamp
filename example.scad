@@ -1,7 +1,7 @@
 // Thread lib https://www.thingiverse.com/thing:2158656
 use <lib/ISOThread.scad>
 
-thickness = 1.1;
+thickness = 1.4;
 thickness_bulb = 1.1;
 bulb_d = 100;
 bulb_scale = 1.5; // 1
@@ -18,7 +18,7 @@ thread_pitch = 4;
 
 connector_height = 10;
 connector_width = 14; // 16;
-connector_deep = 0.4;
+connector_deep = 0; //0.4;
 // 14 -> 0.4
 // 16 -> 0.5
 // 20 -> 1
@@ -92,7 +92,7 @@ module outer_thread() {
             m=thread_d,    // M size, mm, (outer diameter)
             p=thread_pitch,  // Pitch, mm (0 for standard coarse pitch)
             l=thread_h,   // length
-            t=0,    // tolerance to add (for internal thread)
+            t=-0.2,    // tolerance to add (for internal thread)
             cap=1  // capped ends. If uncapped, length is half a turn more top and bottom
         );
 
